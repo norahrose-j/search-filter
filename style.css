@@ -1,26 +1,26 @@
 @font-face {
     font-family: Script;
-    src: url(../fonts/Sail-Regular.ttf);
+    src: url(fonts/Sail-Regular.ttf);
 }
 
 @font-face {
     font-family: Text;
-    src: url(../fonts/CormorantGaramond-Regular.ttf);
+    src: url(fonts/CormorantGaramond-Regular.ttf);
 }
 
 @font-face {
     font-family: TextBold;
-    src: url(../fonts/CormorantGaramond-Bold.ttf);
+    src: url(fonts/CormorantGaramond-Bold.ttf);
 }
 
 @font-face {
     font-family: TextItalic;
-    src: url(../fonts/CormorantGaramond-Italic.ttf);
+    src: url(fonts/CormorantGaramond-Italic.ttf);
 }
 
 @font-face {
     font-family: Heading;
-    src: url(../fonts/Italiana-Regular.ttf);
+    src: url(fonts/Italiana-Regular.ttf);
 }
 
 html {
@@ -40,77 +40,6 @@ a {
     text-decoration: none;
 }
 
-/* NAVIGATION MENU */
-#header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    z-index: 100;
-  }
-
-#menu-btn {
-    border-style: none;
-    font-size: 22px;
-    transition: color 0.3s ease;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-#menu-btn.active {
-    color: #1c1c11 !important;
-}
-  
-.nav-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255);
-    color: rgb(28, 28, 28);
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0.5s;
-    z-index: 99;
-}
-  
-.nav-menu ul {
-    list-style: none;
-    text-align: left;
-}
-  
-.nav-menu ul li {
-    font-family: 'Heading';
-    margin: 1.7rem 0;
-    margin-left: 3vw;
-    margin-top: 2rem;
-}
-  
-.nav-menu ul li a {
-    color: rgb(28, 28, 28);
-    text-decoration: none;
-    font-size: 4.5rem;
-    transition: color 0.3s;
-    transition: margin-left 0.3s;
-}
-  
-  .nav-menu ul li a:hover {
-    color: cadetblue;
-    margin-left: 2rem;
-  }
-  
-.nav-menu.open {
-    opacity: 1;
-    visibility: visible;
-}
-
-.currpage {
-    color: rgb(79, 140, 142);
-}
-
 /* SEARCH FIELD */
 #searchfield {
     margin-top: 10vh;
@@ -123,7 +52,7 @@ a {
     margin-left: auto;
     margin-right: auto;
 
-    background-image: url(../images/header.png);
+    background-image: url(images/header.png);
 }
 
 h1 {
