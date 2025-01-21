@@ -43,7 +43,11 @@ npc.addEventListener('click', function () {
         const entry = entries[i];
         const eList = entry.classList;
 
-        eList.toggle('toggleshow');
+        if ((!eList.contains('npc')) && (!eList.contains('hideentry'))) {
+            eList.add('hideentry');
+        } else if ((!eList.contains('npc') && eList.contains('hideentry'))) {
+            eList.remove('hideentry');
+        }
     }
 });
 
@@ -66,7 +70,11 @@ monster.addEventListener('click', function () {
         const entry = entries[i];
         const eList = entry.classList;
 
-        eList.toggle('toggleshow');
+        if ((!eList.contains('monster')) && (!eList.contains('hideentry'))) {
+            eList.add('hideentry');
+        } else if ((!eList.contains('monster') && eList.contains('hideentry'))) {
+            eList.remove('hideentry');
+        }
     }
 });
 
@@ -89,7 +97,11 @@ equip.addEventListener('click', function () {
         const entry = entries[i];
         const eList = entry.classList;
 
-        eList.toggle('toggleshow');
+        if ((!eList.contains('equip')) && (!eList.contains('hideentry'))) {
+            eList.add('hideentry');
+        } else if ((!eList.contains('equip') && eList.contains('hideentry'))) {
+            eList.remove('hideentry');
+        }
     }
 });
 
@@ -112,7 +124,11 @@ magic.addEventListener('click', function () {
         const entry = entries[i];
         const eList = entry.classList;
 
-        eList.toggle('toggleshow');
+        if ((!eList.contains('magic')) && (!eList.contains('hideentry'))) {
+            eList.add('hideentry');
+        } else if ((!eList.contains('magic') && eList.contains('hideentry'))) {
+            eList.remove('hideentry');
+        }
     }
 });
 
@@ -129,15 +145,12 @@ search.addEventListener("keyup", function () {
         const entry = entries[i];
         const entList = entry.classList;
 
-        var target = titles[i].innerText.toUpperCase();   
-        if (target.includes(filter) && !entList.contains("hidefilter")) {
-            entList.add("showentry")
-            entList.remove("hideentry")
-        } else {
-            entList.add("hideentry")
-            entList.remove("showentry")
-            entList.add("hidefilter")
-            entList.remove("showfilter")
+        var curr = titles[i].innerText.toUpperCase();   
+        
+        if (!curr.includes(filter)) {
+            entList.add('hidefromsearch');
+        } else if (curr.includes(filter) && (!curr.includes('hideentry'))) {
+            entList.remove('hidefromsearch');
         }
     } 
 });

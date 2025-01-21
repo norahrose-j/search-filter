@@ -130,7 +130,11 @@ main {
     color: #f1f1f1;
 }
 
-.toggleshow {
+.hideentry {
+    display: none;
+}
+
+.hidefromsearch {
     display: none;
 }
 
