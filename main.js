@@ -24,71 +24,95 @@ const magic = document.getElementById('magicfilter');
 
 const entries = document.getElementsByClassName('entry');
 
+npc.addEventListener('mouseover', function () {
+    const npcIcon = document.getElementById('person');
+    npcIcon.style.color = '#fff'
+})
+
+npc.addEventListener('mouseleave', function () {
+    const npcIcon = document.getElementById('person');
+    npcIcon.style.color = '#1c1c11'
+})
+
 npc.addEventListener('click', function () {
+    npc.classList.toggle('togglebgcolor');
+    const npcIcon = document.getElementById('person');
+    npcIcon.classList.toggle('togglecolor')
+
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
         const eList = entry.classList;
 
-        if (eList.contains("npc") && !eList.contains("hideentry")) {
-            eList.add("showfilter")
-            eList.remove("hidefilter")
-        } else {
-            eList.add("hidefilter")
-            eList.remove("showfilter")
-            eList.add("hideentry")
-            eList.remove("showentry")
-        }
+        eList.toggle('toggleshow');
     }
 });
+
+monster.addEventListener('mouseover', function () {
+    const icon = document.getElementById('dragon');
+    icon.style.color = '#fff'
+})
+
+monster.addEventListener('mouseleave', function () {
+    const icon = document.getElementById('dragon');
+    icon.style.color = '#1c1c11'
+})
 
 monster.addEventListener('click', function () {
+    monster.classList.toggle('togglebgcolor');
+    const monsterIcon = document.getElementById('dragon');
+    monsterIcon.classList.toggle('togglecolor')
+
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
         const eList = entry.classList;
 
-        if (eList.contains("monster") && !eList.contains("hideentry")) {
-            eList.add("showfilter")
-            eList.remove("hidefilter")
-        } else {
-            eList.add("hidefilter")
-            eList.remove("showfilter")
-            eList.add("hideentry")
-            eList.remove("showentry")
-        }
+        eList.toggle('toggleshow');
     }
 });
+
+equip.addEventListener('mouseover', function () {
+    const icon = document.getElementById('shield');
+    icon.style.color = '#fff'
+})
+
+equip.addEventListener('mouseleave', function () {
+    const icon = document.getElementById('shield');
+    icon.style.color = '#1c1c11'
+})
 
 equip.addEventListener('click', function () {
+    equip.classList.toggle('togglebgcolor');
+    const equipIcon = document.getElementById('shield');
+    equipIcon.classList.toggle('togglecolor')
+
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
         const eList = entry.classList;
 
-        if (eList.contains("equip") && !eList.contains("hideentry")) {
-            eList.add("showfilter")
-            eList.remove("hidefilter")
-        } else {
-            eList.add("hidefilter")
-            eList.remove("showfilter")
-            eList.add("hideentry")
-            eList.remove("showentry")
-        }
+        eList.toggle('toggleshow');
     }
 });
 
+magic.addEventListener('mouseover', function () {
+    const icon = document.getElementById('magic');
+    icon.style.color = '#fff'
+})
+
+magic.addEventListener('mouseleave', function () {
+    const icon = document.getElementById('magic');
+    icon.style.color = '#1c1c11'
+})
+
 magic.addEventListener('click', function () {
+    magic.classList.toggle('togglebgcolor');
+    const magicIcon = document.getElementById('magic');
+    magicIcon.classList.toggle('togglecolor')
+
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
         const eList = entry.classList;
 
-        if (eList.contains("magic") && !eList.contains("hideentry")) {
-            eList.add("showfilter")
-            eList.remove("hidefilter")
-        } else {
-            eList.add("hidefilter")
-            eList.remove("showfilter")
-            eList.add("hideentry")
-            eList.remove("showentry")
-        }
+        eList.toggle('toggleshow');
     }
 });
 

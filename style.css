@@ -94,12 +94,12 @@ h1 {
 }
 
 .filterbutton:hover {
-    background-color: #dadada;
+    background-color: #aeadad;
 }
 
 .filtericon {
     font-size: 25px;
-    color: #363d12;
+    color: #1c1c11;
 
     transition: all 0.5s ease;
 }
@@ -122,11 +122,15 @@ main {
     box-shadow: 5px 5px 10px #1c1c1126;
 }
 
-.showentry {
-    display: block;
+.togglebgcolor {
+    background-color: #aeadad;
 }
 
-.hideentry {
+.togglecolor {
+    color: #f1f1f1;
+}
+
+.toggleshow {
     display: none;
 }
 
