@@ -24,60 +24,78 @@ const magic = document.getElementById('magicfilter');
 
 const entries = document.getElementsByClassName('entry');
 
+var npcClicked = false;
 npc.addEventListener('mouseover', function () {
     const npcIcon = document.getElementById('person');
     npcIcon.style.color = '#fff'
 })
 
 npc.addEventListener('mouseleave', function () {
-    const npcIcon = document.getElementById('person');
-    npcIcon.style.color = '#1c1c11'
+    console.log(npcClicked);
+    const icon = document.getElementById('person');
+    if (npcClicked == false) {
+        icon.style.color = '#BC9116';
+    } else {
+        icon.style.color == '#fff'
+    }
 })
 
 npc.addEventListener('click', function () {
     npc.classList.toggle('togglebgcolor');
     const npcIcon = document.getElementById('person');
-    npcIcon.classList.toggle('togglecolor')
 
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
         const eList = entry.classList;
 
-        if ((!eList.contains('npc')) && (!eList.contains('hideentry'))) {
-            eList.add('hideentry');
-        } else if ((!eList.contains('npc') && eList.contains('hideentry'))) {
-            eList.remove('hideentry');
+        if ((!eList.contains('npc')) && (!eList.contains('hideNpcEntry'))) {
+            eList.add('hideNpcEntry');
+            npcClicked = true;
+            npcIcon.classList.add('togglecolor');
+        } else if ((!eList.contains('npc') && eList.contains('hideNpcEntry'))) {
+            eList.remove('hideNpcEntry');
+            npcClicked = false;
+            npcIcon.classList.remove('togglecolor');
         }
     }
 });
 
+var monsterClicked = false;
 monster.addEventListener('mouseover', function () {
     const icon = document.getElementById('dragon');
-    icon.style.color = '#fff'
+    icon.style.color = '#fff';
 })
 
 monster.addEventListener('mouseleave', function () {
     const icon = document.getElementById('dragon');
-    icon.style.color = '#1c1c11'
+    if (monsterClicked == false) {
+        icon.style.color = '#BC9116';
+    } else {
+        icon.style.color == '#fff'
+    }
 })
 
 monster.addEventListener('click', function () {
     monster.classList.toggle('togglebgcolor');
     const monsterIcon = document.getElementById('dragon');
-    monsterIcon.classList.toggle('togglecolor')
 
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
         const eList = entry.classList;
 
-        if ((!eList.contains('monster')) && (!eList.contains('hideentry'))) {
-            eList.add('hideentry');
-        } else if ((!eList.contains('monster') && eList.contains('hideentry'))) {
-            eList.remove('hideentry');
+        if ((!eList.contains('monster')) && (!eList.contains('hideMonsterEntry'))) {
+            eList.add('hideMonsterEntry');
+            monsterClicked = true;
+            monsterIcon.classList.add('togglecolor');
+        } else if ((!eList.contains('monster') && eList.contains('hideMonsterEntry'))) {
+            eList.remove('hideMonsterEntry');
+            monsterClicked = false;
+            monsterIcon.classList.remove('togglecolor');
         }
     }
 });
 
+var equipClicked = false;
 equip.addEventListener('mouseover', function () {
     const icon = document.getElementById('shield');
     icon.style.color = '#fff'
@@ -85,49 +103,65 @@ equip.addEventListener('mouseover', function () {
 
 equip.addEventListener('mouseleave', function () {
     const icon = document.getElementById('shield');
-    icon.style.color = '#1c1c11'
+    if (equipClicked == false) {
+        icon.style.color = '#BC9116';
+    } else {
+        icon.style.color == '#fff'
+    }
 })
 
 equip.addEventListener('click', function () {
     equip.classList.toggle('togglebgcolor');
     const equipIcon = document.getElementById('shield');
-    equipIcon.classList.toggle('togglecolor')
 
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
         const eList = entry.classList;
 
-        if ((!eList.contains('equip')) && (!eList.contains('hideentry'))) {
-            eList.add('hideentry');
-        } else if ((!eList.contains('equip') && eList.contains('hideentry'))) {
-            eList.remove('hideentry');
+        if ((!eList.contains('equip')) && (!eList.contains('hideEquipEntry'))) {
+            eList.add('hideEquipEntry');
+            equipClicked = true;
+            equipIcon.classList.add('togglecolor');
+        } else if ((!eList.contains('equip') && eList.contains('hideEquipEntry'))) {
+            eList.remove('hideEquipEntry');
+            equipClicked = false;
+            equipIcon.classList.remove('togglecolor');
         }
     }
 });
 
+var magicClicked = false;
 magic.addEventListener('mouseover', function () {
     const icon = document.getElementById('magic');
     icon.style.color = '#fff'
 })
 
 magic.addEventListener('mouseleave', function () {
+    console.log(magicClicked);
     const icon = document.getElementById('magic');
-    icon.style.color = '#1c1c11'
+    if (magicClicked == false) {
+        icon.style.color = '#BC9116';
+    } else {
+        icon.style.color == '#fff'
+    }
 })
 
 magic.addEventListener('click', function () {
     magic.classList.toggle('togglebgcolor');
     const magicIcon = document.getElementById('magic');
-    magicIcon.classList.toggle('togglecolor')
 
     for (let i = 0; i < entries.length; i++) {
         const entry = entries[i];
         const eList = entry.classList;
 
-        if ((!eList.contains('magic')) && (!eList.contains('hideentry'))) {
-            eList.add('hideentry');
-        } else if ((!eList.contains('magic') && eList.contains('hideentry'))) {
-            eList.remove('hideentry');
+        if ((!eList.contains('magic')) && (!eList.contains('hideMagicEntry'))) {
+            eList.add('hideMagicEntry');
+            magicClicked = true;
+            magic.classList.add('togglecolor');
+        } else if ((!eList.contains('magic') && eList.contains('hideMagicEntry'))) {
+            eList.remove('hideMagicEntry');
+            magicClicked = false;
+            magicIcon.classList.remove('togglecolor');
         }
     }
 });

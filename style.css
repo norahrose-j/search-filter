@@ -94,12 +94,12 @@ h1 {
 }
 
 .filterbutton:hover {
-    background-color: #aeadad;
+    background-color: #BC9116;
 }
 
 .filtericon {
     font-size: 25px;
-    color: #1c1c11;
+    color: #BC9116;
 
     transition: all 0.5s ease;
 }
@@ -123,14 +123,26 @@ main {
 }
 
 .togglebgcolor {
-    background-color: #aeadad;
+    background-color: #BC9116;
 }
 
 .togglecolor {
-    color: #f1f1f1;
+    color: #fff;
 }
 
-.hideentry {
+.hideNpcEntry {
+    display: none;
+}
+
+.hideMonsterEntry {
+    display: none;
+}
+
+.hideMagicEntry {
+    display: none;
+}
+
+.hideEquipEntry {
     display: none;
 }
 
@@ -158,6 +170,20 @@ h2 {
 }
 
 .entryheader .fa-wand-sparkles {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2vw;
+}
+
+.entryheader .fa-dragon {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2vw;
+}
+
+.entryheader .fa-shield-halved {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
